@@ -42,3 +42,41 @@ var processR = new Mn.Region({
 });
 
 processR.show(processV);
+
+
+var resultsR = new Mn.Region({
+	el: "#mn-r-results"
+});
+
+var ResultsV = Mn.LayoutView.extend({
+	template: "app/compute.html",
+	events: {
+		"click button": "compute"
+	},
+	compute: function(){
+		console.log("compute")
+		
+		var grades = $("select.js-criteria-evaluation").map(function(){
+			var val = Number($(this).val());
+			if(_.isNaN(val)){
+				val = 0;
+			}
+			return val;
+		});
+
+		var totalGrades = 0;
+		var total = 0;
+		for(var i=0; i<grades.length; i++){
+			if(grades[i]>0){
+				totalGrades += grades[i];
+				total += 5;
+			}
+		}
+		//debugger;
+		var result = Math.round(totalGrades / total * 100);
+		console.log(result)
+		$("#grade-result").html("<h3>Evaluation for this action:</h3><h1> " + result + "%</h1>");
+	}
+});
+
+resultsR.show(new ResultsV);
