@@ -1,23 +1,44 @@
-var becca = [
-{
-	category: "Effectiveness",
-	criteria: "General",
-	explanation: "The extent to which the intended outcome(s) has (have) been achieved. In terms of preventing climate change damage (e.g. reducing impacts, reducing exposure, enhancing resilience or enhancing adaptive capacity, reduction in economic losses). A further specification might be to consider effectiveness also in terms of ‘cost-effectiveness’.",
-	wheight: 1,
-	grade: undefined
-},
-{
-	category: "Effectiveness",
-	criteria: "Relevance",
-	explanation: "The extent to which the adaptation measures addressed climate change impact.",
-	wheight: 1,
-	grade: undefined
-},
-{
-	category: "Effectiveness",
-	criteria: "Avoided damage",
-	explanation: "Portion of the targeted potential damages that could be avoided by implementing the adaptation measures. The portion of avoided damage might result in expected gross benefits (Example for measurement: Avoided damages in physical and economic metrics)",
-	wheight: 1,
-	grade: undefined
-}
-]
+
+var CriteriaV = Mn.ItemView.extend({
+	template: "app/criteria.html",
+	onBeforeAttach: function(){
+		this.$(".js-criteria-weight").val("1")
+	}
+});
+
+
+
+// outcome approaches (what has been achieved?)
+
+var outcomeV = new CriteriaV({
+	model: new Backbone.Model({
+		criteria: [
+			_.where(criteria, {type: "Outcome", category: "Effectiveness"}),
+			_.where(criteria, {type: "Outcome", category: "Efficiency"}),
+			_.where(criteria, {type: "Outcome", category: "Equity"})
+		]
+	})
+});
+
+var outcomeR = new Mn.Region({
+	el: "#mn-r-outcome"
+});
+
+outcomeR.show(outcomeV);
+
+// process-oriented approaches (how has this been done?)
+
+var processV = new CriteriaV({
+	model: new Backbone.Model({
+		criteria: [
+			_.where(criteria, {type: "Process", category: "Adaptive capacity"}),
+			_.where(criteria, {type: "Process", category: "Dependencies"}),
+		]
+	})
+});
+
+var processR = new Mn.Region({
+	el: "#mn-r-process"
+});
+
+processR.show(processV);

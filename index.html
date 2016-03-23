@@ -9,6 +9,8 @@
     <title>Bootstrap 101 Template</title>
     <link rel="stylesheet" href="/_lib/bootstrap/3.3.1/css/bootstrap.css">
     <link rel="stylesheet" href="/_lib/bootstrap/bootflat/bootflat.css">
+    <link rel="stylesheet" href="/_lib/font-awesome/4.4.0/css/font-awesome.css">
+
 </head>
 
 <body>
@@ -40,13 +42,11 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h3>OUTCOME CRITERIA</h3>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">CATEGORY: Effectiveness</h3>
-                    </div>
-                    <div class="panel-body">
-                    </div>
-                </div>
+                <div id="mn-r-outcome"></div>
+
+                <h3>PROCESS-ORIENTED CRITERIA</h3>
+                <div id="mn-r-process"></div>
+
             </div>
         </div>
     </div>
@@ -60,6 +60,11 @@
     <script src="/_lib/underscore/underscore-1.8.3.js"></script>
     <script src="/_lib/backbone/backbone-1.2.3.js"></script>
     <script src="/_lib/backbone/backbone.marionette-2.4.4.js"></script>
+    <script src="/_lib/backbone/renderer-nunjucks.js"></script>
+
+    <script src="/_lib/nunjucks/nunjucks-slim-2.4.1.js"></script>
+    <script src="/app/templates-precompiled.js"></script>
+    <script src="/app/criteria.js"></script>
     <script src="/app/index.js"></script>
     </div>
 </body>
