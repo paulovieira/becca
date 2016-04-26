@@ -1,30 +1,12 @@
 // https://github.com/guyonroche/exceljs#reading-xlsx
 
+var Fs = require("fs");
 var Excel = require('exceljs');
 var _ = require("underscore");
 
 
 var workbook = new Excel.Workbook();
 
-/*
-
-1st pass - read the evaluation that each case study gave to each criteria; will create an array of objects of the form:
-
-[
-	{
-		"Case Study": "Cascais Municipality",
-		"Effectiveness - General description - Relevance": 4,
-		"Effectiveness - General description - Feasibility": 3,
-		...
-	},
-	{
-		...
-	}
-]
-
-This data is available in sheet1, but also on sheet 5, 9, etc 
-
-*/
 
 // the main array
 var becca = [];
@@ -39,6 +21,40 @@ var rowStart = 4, rowEnd = 20;
 //var rowStart = 5, rowEnd = 6;
 workbook.xlsx
 	.readFile(process.argv[2])
+
+/*
+
+1st pass - read the evaluation that each case study gave to each criteria; 
+
+1) for each row in the spreadsheet create a caseStudy object; it will have the form:
+
+	{
+		_row: 4,
+		_name: "Cascais Municipality",
+		rates: {
+            "Participation - Quality of the process": {
+                "relevance": "5",
+                "feasibility": "5",
+                "availability of information": "5"
+            },
+            ...
+		}
+
+		// to be done in the 2nd pass...
+		contextDimensions: {
+			sectors: [..., ...],
+			impatcs: [..., ...]
+		}
+	},
+
+
+2) push to the array
+
+
+This data is available in sheet1, but also on sheet 5, 9, etc (it is repeated, so we use sheet 1) 
+
+*/
+
     .then(function() {
 
     	var workSheet1 = workbook.getWorksheet(1);
@@ -110,18 +126,41 @@ workbook.xlsx
 		});
     })
 
-	// 2nd pass
+/*
+
+2nd pass - for each sheet whose id is of the form 4*n + 1 (n=0,1,...),
+
+a) iterate over all the rows and get the correct object from the becca array
+b) iterate over all the cells from 1 to 10 (the different context dimensions); for those whose value is "x", append the respective value at row 3 to the array in the "contextDimension.xyz" property (where xyz is given by the sheetsMapping: "sectors", "impacts", etc)
+
+Example:
+
+[
+	{
+		"Case Study": "Cascais Municipality",
+		...
+		"contextDimension": ["Health and Social Policies", "Tourism", "retro- und prospective", ...]
+	},
+	{
+		"Case Study": "Timmendorf",
+		...
+		"contextDimension": ["Coastal and Marine systems", ...]
+	}
+]
+
+
+*/
 	.then(function(){
 
 
 		var sheetsMapping = {
-			"sectors": 1,
-			"impacts": 5,
-			"perspective": 9,
-			"integration": 13,
-			"approach": 17,
-			"orientation": 21,
-			"setting": 25
+			"sectors": "Original_Criter_Sectors",
+			"impacts": "Original_Criter_Impacts",
+			"perspective": "Original_Criter_Perspective",
+			"integration": "Original_Criter_integration",
+			"approach": "Original_Criter_approach",
+			"orientation": "Original_Criter_Orientation",
+			"setting": "Original_Criter_Setting"
 		};
 
 		for(var sheet in sheetsMapping){
@@ -131,7 +170,8 @@ workbook.xlsx
 	    	// the rows relative to the case-studies (4 to 19)
 			var rows = _.range(rowStart, rowEnd);
 
-			// the cells relative to the contextual dimensions
+			// the cells relative to the contextual dimensions; note that the interval for some sheets
+			// is smaller (like 1 to 3), but the values are then ignored 
 			var cells = _.range(1, 10);
 
 			rows.forEach(function(row){
@@ -153,29 +193,64 @@ workbook.xlsx
 					if(pair[1]==="null"){
 						pair[1] = "";
 					}
+					
+					pair[0] = pair[0].trim();
+					pair[1] = pair[1].trim();
 
-					if(pair[1].indexOf("x")>=0){
-						pairs.push(pair);	
+					pair[0] = cleanContextDimension(pair[0]);
+
+					if(pair[1] && pair[1] === "x"){
+						pairs.push(pair);
 					}
+
 				});
 
 				var obj = _.object(pairs);
 
-				// finally, all is good, add the object with the context dimensions properties to the case study
+				// finally, all is good now, add the object with the context dimensions properties to the case study
 				caseStudy.contextDimensions = caseStudy.contextDimensions || {};
+				debugger;
 				caseStudy.contextDimensions[sheet] = Object.keys(obj);
 			});
 
 		}
 
 	})
+
 	.then(function(){
 
-		becca.forEach(o => {
-			console.log(o["_name"]);
-			console.log(o["contextDimensions"]);
-			console.log("\n\n");
+		// final check for the contextDimensions: make sure the non-exclusive fields (can have one, the other, or both) are coherent
+		becca.forEach(function(cs){
+			for(var dim in cs.contextDimensions){
+
+				// this dimension allows the "both" option, so use it!
+				if(dim==="perspective" || dim==="approach" || dim==="setting"){
+					if(cs.contextDimensions[dim].length===2){
+						cs.contextDimensions[dim] = ["Both"];
+					}
+				}
+
+				// this dimension doesn't allow the "both" option in the sheet, so we use the first value in the array
+				if(dim==="integration" || dim==="orientation"){
+					if(cs.contextDimensions[dim].length===2){
+						cs.contextDimensions[dim] = [cs.contextDimensions[dim][0]];
+					}
+				}
+
+				if(cs.contextDimensions[dim].length===0){
+					console.log(`contextDimension ${ dim } is empty (${ cs["_name"] })`);
+				}
+				
+			}
 		})
+
+		// becca.forEach(o => {
+		// 	console.log(o["_name"]);
+		// 	console.log(o["contextDimensions"]);
+		// 	console.log("\n\n");
+		// })
+
+		Fs.writeFileSync("becca.json", JSON.stringify(becca, null, 4))
 
 	})
     .catch(function(err){
@@ -183,31 +258,7 @@ workbook.xlsx
     })
 
 
-/*
 
-2nd pass - for each sheet whose id is of the form 4*n + 1 (n=0,1,...),
-
-a) find the cell id whose text is "Response ID"
-b) iterate over all the rows and get the correct object from the becca array
-c) iterate over all the cells from 1 until the one found in a) (the different context dimensions), and for those that have the "x", append to the array in the "contextDimension" property
-
-Example:
-
-[
-	{
-		"Case Study": "Cascais Municipality",
-		...
-		"contextDimension": ["Health and Social Policies", "Tourism", "retro- und prospective", ...]
-	},
-	{
-		"Case Study": "Timmendorf",
-		...
-		"contextDimension": ["Coastal and Marine systems", ...]
-	}
-]
-
-
-*/
 
 // clean the original data
 function cleanRates(pair, cell){
@@ -244,5 +295,17 @@ function cleanRates(pair, cell){
 		return pair;
 	}
 
+	// fallback
 	return pair;
+}
+
+function cleanContextDimension(dimension){
+
+	if(dimension === "retro- und prospective"){
+		return "both";
+	}
+
+	// fallback
+	return dimension;
+
 }
