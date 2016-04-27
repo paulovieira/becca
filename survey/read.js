@@ -109,7 +109,7 @@ This data is available in sheet1, but also on sheet 5, 9, etc (it is repeated, s
 					throw new Error("Dimension should be one of: 'relevance', 'feasibility', 'availability of information'")
 				}
 
-				caseStudy["rates"][criteriaName][dimension] = obj[key];
+				caseStudy["rates"][criteriaName][dimension] = Number(obj[key]);
 			}
 
 			// make sure that for all criteria we for the 3 dimensions
