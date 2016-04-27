@@ -11,3 +11,4 @@ criteriaPlugin.start({
 
 var Becca = require("../survey/becca.json");
 console.log(Becca);
+var x = 2;
