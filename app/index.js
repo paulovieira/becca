@@ -1,5 +1,6 @@
 require("./_config/config");
-var $ = require("jquery")
+var $ = require("jquery");
+var Mn = require("backbone.marionette");
 var criteriaPlugin = require("./plugins/criteria/criteria-plugin");
 
 $("input[data-becca=context-dimension]").checkbox();
