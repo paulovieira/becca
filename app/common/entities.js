@@ -31,9 +31,9 @@ module.exports.criteriaC = criteriaC;
 window.criteriaC = criteriaC;
 */
 
-var criteria = require("./criteria-data.js")
-module.exports.criteria = criteria;
-window.criteria = criteria;
+// var criteria = require("./criteria-data-2.js")
+// module.exports.criteria = criteria;
+// window.criteria = criteria;
 
 /*
 var selectedDimensionsM = new Backbone.Model({

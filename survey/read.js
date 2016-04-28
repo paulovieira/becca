@@ -80,6 +80,24 @@ This data is available in sheet1, but also on sheet 5, 9, etc (it is repeated, s
 					String(workSheet1.getRow(row).getCell(cell).value)
 				];
 
+// TODO: correct later
+				if(pair[0].indexOf("Coherence")>=0 && pair[0].indexOf("synergies")>=0){
+					console.log("yyyy")
+					return
+				}
+				if(pair[0].indexOf("Coherence")>=0 && pair[0].indexOf("Vertical")>=0){
+					console.log("yyyy")
+					return
+				}
+				if(pair[0].indexOf("Coherence")>=0 && pair[0].indexOf("Horizontal")>=0){
+					console.log("yyyy")
+					return
+				}
+				
+				if(pair[0].indexOf("Coherence")>=0 && pair[0].indexOf("policy")>=0){
+					console.log("yyyy")
+					return
+				}
 
 				if(cell>=12 && !_.contains(["1","2","3","4","5","n/a", "null"], pair[1])){
 					console.log("cell: ", cell);
@@ -115,8 +133,11 @@ This data is available in sheet1, but also on sheet 5, 9, etc (it is repeated, s
 			// make sure that for all criteria we for the 3 dimensions
 			for(var key in caseStudy["rates"]){
 
-				var obj = caseStudy[key];
+				var obj = caseStudy["rates"][key];
+
 				if(typeof obj === "object" && Object.keys(obj).length!==3){
+					console.log(caseStudy._row)
+					console.log(key)
 					throw new Error("The criteria does not have the 3 dimensions")
 				}
 			}
@@ -125,6 +146,9 @@ This data is available in sheet1, but also on sheet 5, 9, etc (it is repeated, s
 			becca.push(caseStudy);
 		});
     })
+	// .then(function(){
+	// 	Fs.writeFileSync("becca_a.json", JSON.stringify(becca, null, 4))
+	// })
 
 /*
 
@@ -270,13 +294,13 @@ function cleanRates(pair, cell){
 
 	if(pair[1]==='n/a'){
 		pair[1] = '0';
-		return pair;
+		//return pair;
 	}
 
 	if(pair[1]==='null'){
 		pair[1] = '0';
 		console.log(`warning: cell ${ cell} does not have a value`)
-		return pair;
+		//return pair;
 	}
 
 	var wrong, correct;
@@ -284,6 +308,7 @@ function cleanRates(pair, cell){
 	wrong = "_x000D_";
 	correct = "";
 	if(pair[0].indexOf(wrong) >= 0){
+		//console.log("correct: ", pair[0])
 		pair[0] = pair[0].replace(wrong, correct);
 		return pair;
 	}
@@ -294,6 +319,7 @@ function cleanRates(pair, cell){
 		pair[0] = pair[0].replace(wrong, correct);	
 		return pair;
 	}
+
 
 	// fallback
 	return pair;

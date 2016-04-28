@@ -187,26 +187,6 @@
                 "feasibility": 4,
                 "availability of information": 4
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 3
-            },
             "Robustness - General": {
                 "relevance": 3,
                 "feasibility": 3,
@@ -545,26 +525,6 @@
                 "feasibility": 3,
                 "availability of information": 3
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 4,
-                "availability of information": 4
-            },
             "Robustness - General": {
                 "relevance": 5,
                 "feasibility": 4,
@@ -900,26 +860,6 @@
                 "relevance": 5,
                 "feasibility": 5,
                 "availability of information": 5
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 5
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 4
             },
             "Robustness - General": {
                 "relevance": 5,
@@ -1258,26 +1198,6 @@
                 "feasibility": 4,
                 "availability of information": 4
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 3
-            },
             "Robustness - General": {
                 "relevance": 4,
                 "feasibility": 2,
@@ -1611,26 +1531,6 @@
                 "relevance": 5,
                 "feasibility": 3,
                 "availability of information": 3
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 2,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 2
             },
             "Robustness - General": {
                 "relevance": 5,
@@ -1967,26 +1867,6 @@
                 "relevance": 5,
                 "feasibility": 3,
                 "availability of information": 3
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 4
             },
             "Robustness - General": {
                 "relevance": 5,
@@ -2326,26 +2206,6 @@
                 "relevance": 3,
                 "feasibility": 2,
                 "availability of information": 3
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 3,
-                "feasibility": 2,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 4,
-                "feasibility": 2,
-                "availability of information": 2
             },
             "Robustness - General": {
                 "relevance": 4,
@@ -2688,26 +2548,6 @@
                 "feasibility": 5,
                 "availability of information": 4
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 4,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
             "Robustness - General": {
                 "relevance": 5,
                 "feasibility": 5,
@@ -3044,26 +2884,6 @@
                 "feasibility": 1,
                 "availability of information": 1
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 2,
-                "feasibility": 2,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 3,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 3,
-                "feasibility": 4,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 3,
-                "feasibility": 4,
-                "availability of information": 4
-            },
             "Robustness - General": {
                 "relevance": 5,
                 "feasibility": 5,
@@ -3398,26 +3218,6 @@
                 "feasibility": 5,
                 "availability of information": 5
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 1,
-                "feasibility": 1,
-                "availability of information": 1
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 2,
-                "feasibility": 2,
-                "availability of information": 2
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
             "Robustness - General": {
                 "relevance": 4,
                 "feasibility": 4,
@@ -3740,26 +3540,6 @@
                 "feasibility": 4,
                 "availability of information": 3
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 2,
-                "feasibility": 2,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 4
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 4
-            },
             "Robustness - General": {
                 "relevance": 5,
                 "feasibility": 5,
@@ -4008,10 +3788,8 @@
                 "feasibility": 3,
                 "availability of information": 3
             },
-            "Sustainability, Impacts and Side - effects - Sustainability_x000D_": {
-                "relevance": 0
-            },
             "Sustainability, Impacts and Side - effects - Sustainability": {
+                "relevance": 0,
                 "feasibility": 0,
                 "availability of information": 0
             },
@@ -4086,26 +3864,6 @@
                 "availability of information": 3
             },
             "Coherence - General": {
-                "relevance": 5,
-                "feasibility": 2,
-                "availability of information": 1
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 5,
-                "feasibility": 2,
-                "availability of information": 1
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 5,
-                "feasibility": 2,
-                "availability of information": 1
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 5,
-                "feasibility": 2,
-                "availability of information": 1
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
                 "relevance": 5,
                 "feasibility": 2,
                 "availability of information": 1
@@ -4286,10 +4044,8 @@
             },
             "Effectiveness - Triggering incentive": {
                 "relevance": 0,
+                "feasibility": 0,
                 "availability of information": 0
-            },
-            "Effectiveness - Triggering incentive _x000D_": {
-                "feasibility": 0
             },
             "Effectiveness - Scope of effect": {
                 "relevance": 5,
@@ -4450,28 +4206,6 @@
                 "relevance": 5,
                 "feasibility": 5,
                 "availability of information": 5
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 5,
-                "feasibility": 0,
-                "availability of information": 0
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 0
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 0
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures - Vertical integration": {
-                "feasibility": 0,
-                "availability of information": 0
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 0
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures - Horizontal integration": {
-                "feasibility": 0,
-                "availability of information": 0
             },
             "Robustness - General": {
                 "relevance": 5,
@@ -4805,24 +4539,6 @@
                 "feasibility": 3,
                 "availability of information": 3
             },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 0,
-                "feasibility": 0,
-                "availability of information": 0
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 0
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 1,
-                "feasibility": 1,
-                "availability of information": 1
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 2,
-                "feasibility": 2,
-                "availability of information": 2
-            },
             "Robustness - General": {
                 "relevance": 2,
                 "feasibility": 2,
@@ -4991,7 +4707,7 @@
                 "feasibility": 3,
                 "availability of information": 3
             },
-            "Effectiveness - Windfall profit_x000D_": {
+            "Effectiveness - Windfall profit": {
                 "relevance": 0,
                 "feasibility": 0,
                 "availability of information": 0
@@ -5160,26 +4876,6 @@
                 "relevance": 3,
                 "feasibility": 3,
                 "availability of information": 3
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 5
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 5
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 5,
-                "feasibility": 5,
-                "availability of information": 5
             },
             "Robustness - General": {
                 "relevance": 3,
@@ -5518,26 +5214,6 @@
                 "relevance": 3,
                 "feasibility": 2,
                 "availability of information": 2
-            },
-            "Coherence - Interactions (conflicts/synergies) with other measures": {
-                "relevance": 5,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects": {
-                "relevance": 4,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Vertical integration": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
-            },
-            "Coherence - Integration with policy domains, programmes or projects - Horizontal integration": {
-                "relevance": 3,
-                "feasibility": 3,
-                "availability of information": 3
             },
             "Robustness - General": {
                 "relevance": 5,

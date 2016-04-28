@@ -1,0 +1,23 @@
+<div class="list-group">
+
+{% for item in criteriaList %}
+
+      <div class="list-group-item" style="margin-bottom: 3px; padding-top: 20px; padding-bottom: 25px;">
+
+        <span class="badge badge-primary" style="font-size: 15px;">Score: {{ item.grade }}</span>
+
+        <div>
+            <span style="font-size: 18px; font-weight: 700;">Category:</span> <span style="font-size: 18px; font-weight: 400;">{{ item.category }}</span>
+            <span style="margin-left: 15px; font-size: 18px; font-weight: 700;">Subcategory/Criteria:</span> <span style="font-size: 18px; font-weight: 400;">{{ item.criteriaShort }}</span>
+        </div>
+
+        <div style="margin-top: 5px; padding-right: 100px;">
+        <span style="font-size: 18px; font-weight: 700;">Explanation:</span> <span style="font-size: 16px; font-weight: 400;">{{ item.explanation }}</span>
+        </div>
+
+      </div>
+
+{% endfor %}
+</div>
+
+
