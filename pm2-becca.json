@@ -1,8 +1,7 @@
 {
   "name": "becca",
-  "script": "http-server . -p 9000",
-  "args": [
-  ],
+  "script": "/usr/bin/http-server",
+  "args": ". -p 9000",
   "env": {
     "NODE_ENV": "production"
   },
