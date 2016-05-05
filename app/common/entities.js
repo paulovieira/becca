@@ -53,11 +53,11 @@ window.selectedDimensionsM = selectedDimensionsM;
 var selectedDimensions = {
 	sector: [],  
 	impact: [],
-	perspective: undefined,
-	integration: undefined,
-	approach: undefined,
-	orientation: undefined,
-	setting: undefined,
+	perspective: [],
+	integration: [],
+	approach: [],
+	orientation: [],
+	setting: [],
 };
 
 module.exports.selectedDimensions = selectedDimensions;

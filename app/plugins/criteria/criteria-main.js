@@ -9,6 +9,14 @@ var CriteriaList = require("./criteria-list")
 var selectedDimensions = require("../../common/entities").selectedDimensions;
 var becca = require("../../common/entities").becca;
 
+
+var internals = {};
+
+internals.cheapClone = function(obj){
+
+    return JSON.parse(JSON.stringify(obj));
+};
+
 var CriteriaMain = Mn.LayoutView.extend({
 
     template: require('./criteria-main.html'),
@@ -25,9 +33,9 @@ var CriteriaMain = Mn.LayoutView.extend({
     events: {
         "click @ui.showCriteriaBtn": function(e){
             
-            // when initialized, the dimensionsForm view will read the selected values in the checkboxes/radios
-            // and update the selectedDimensions model
-            var dimensionsForm = new DimensionsForm();
+            // a DimensionsForm view is template-less; when initialized, it will simply read 
+            // the selected values from the checkboxes/radios and update the selectedDimensions object
+            new DimensionsForm();
 
             this.compute();
         }
@@ -37,31 +45,28 @@ var CriteriaMain = Mn.LayoutView.extend({
 
         // make sure we have something selected
         var somethingSelected = false;
-        _.chain(selectedDimensions)
-            .values()
-            .compact()
-            .each(function(array){ 
-                if(array.length > 0){
-                    somethingSelected = true;
-                }
-            })
+
+        _.each(selectedDimensions, function(dim){
+            if(dim.length > 0){
+                somethingSelected = true;
+            }
+        });
 
         if(!somethingSelected){
-            alert("Plase select some properties from the list above")
+            alert("Plase select some properties from the list above");
             return;
         }
 
-
         // create a new criteria object
-        var criteria = require("../../common/criteria-data-2.js")
-        criteria = JSON.parse(JSON.stringify(criteria));
+        var criteria = internals.cheapClone(require("../../common/criteria-data-2.js"));
+        window.criteria = criteria;
+
         _.each(criteria, function(obj){
+
             var a = obj.criteria.split("-")
             obj["category"] = a[0].trim();
             obj["criteriaShort"] = a[1].trim();
         });
-
-        window.criteria = criteria;
 
 
 //debugger
@@ -113,7 +118,7 @@ var CriteriaMain = Mn.LayoutView.extend({
             obj["feasibility"] /= obj.n;
             obj["availability of information"] /= obj.n;
 
-            obj["grade"] = (1*obj["relevance"] + 1*obj["feasibility"] + 1*obj["availability of information"]) / 3;
+            obj["grade"] = (2*obj["relevance"] + 1*obj["feasibility"] + 1*obj["availability of information"]) / 4;
         });
 
         //var sortedCriteria = _.sortBy(criteria, "grade");
@@ -125,7 +130,6 @@ var CriteriaMain = Mn.LayoutView.extend({
         for(var i=l-1; i>l-10; i--){
             temp[i]["grade"] = temp[i]["grade"].toFixed(1);
             sortedCriteria.push(temp[i]);
-
         }
 
         var criteriaList = new CriteriaList({

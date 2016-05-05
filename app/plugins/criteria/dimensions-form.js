@@ -12,8 +12,10 @@ var DimensionsForm = Mn.ItemView.extend({
     el: $("div#dimensions-form"),
 
     initialize: function(){
+//debugger;
+        var formData = Backbone.Syphon.serialize(this);
 
-        var data = Backbone.Syphon.serialize(this);
+        var checkboxNames = ["impacts", "sectors"];
 
         var radioNames = ["perspective", 
 						"integration", 
@@ -24,28 +26,34 @@ var DimensionsForm = Mn.ItemView.extend({
 		selectedDimensions["sectors"] = [];
 		selectedDimensions["impacts"] = [];
 
-        _.each(data, function(value, name){
+        _.each(formData, function(value, name){
+//debugger;
+            // the value of a checkbox is either true or false (the html doesn't have the "value" attribute)
+            // the value of a radio is the corresponding "value" attribute in the html
 
-        	if(value===false){
-        		return;
-        	}
+            // the "name" attribute has this pattern: "groupName:optionName"
+            var a = name.split(":");
 
-        	// checkbox options
-        	var s = name.split(":");
-        	if(s[1]){
-        		selectedDimensions[s[0]].push(s[1]);
-        		return;
-        	}
+            // checkbox 
+            if(_.contains(checkboxNames, a[0]) && a[1] && value){
+                selectedDimensions[a[0]].push(a[1]);
+                return;
+            }
 
-        	// radio options
-        	if(_.contains(radioNames, name)){
-        		selectedDimensions[name] = [value];
-        		return;
-        	}
+            // radio 
+            if(_.contains(radioNames, a[0]) && value){
+                selectedDimensions[a[0]].push(value);
+                return;
+            }
+        });
 
-        });        
-
-
+        // make sure the radio groups have at most 1 option
+        _.each(radioNames, function(name){
+            if(selectedDimensions[name].length>=2){
+                throw new Error("invalid number of selections for radio group " + name)
+            }
+        });
+        
     }
 
 });
