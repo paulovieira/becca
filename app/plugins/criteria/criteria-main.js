@@ -121,16 +121,11 @@ var CriteriaMain = Mn.LayoutView.extend({
             obj["grade"] = (2*obj["relevance"] + 1*obj["feasibility"] + 1*obj["availability of information"]) / 4;
         });
 
-        //var sortedCriteria = _.sortBy(criteria, "grade");
-        //var temp = _.chain(criteria).sortBy("grade").rest(criteria.length - 10).value()
-        var temp = _.sortBy(criteria, "grade");
-        var sortedCriteria = [];
-
-        var l = temp.length;
-        for(var i=l-1; i>l-10; i--){
-            temp[i]["grade"] = temp[i]["grade"].toFixed(1);
-            sortedCriteria.push(temp[i]);
-        }
+        var sortedCriteria = _.chain(criteria)
+                                // descending order (the first element has the highest grade)
+                                .sortBy(function(obj){ return -obj.grade })
+                                .each(function(obj){ obj.grade = obj.grade.toFixed(1); })
+                                .value();
 
         var criteriaList = new CriteriaList({
             model: new Backbone.Model({ 
