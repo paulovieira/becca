@@ -1,6 +1,8 @@
+
 var _ = require("underscore");
 var $ = require("jquery");
 var Backbone = require("backbone");
+var Radio = require("backbone.radio");
 var Mn = require("backbone.marionette");
 
 var selectedDimensions = require("../../common/entities").selectedDimensions;
@@ -40,9 +42,9 @@ var DimensionsForm = Mn.ItemView.extend({
                 return;
             }
 
-            // radio 
+            // radio xxx
             if(_.contains(radioNames, a[0]) && value){
-                selectedDimensions[a[0]].push(value);
+                selectedDimensions[a[0]][0] = value;
                 return;
             }
         });
@@ -53,7 +55,18 @@ var DimensionsForm = Mn.ItemView.extend({
                 throw new Error("invalid number of selections for radio group " + name)
             }
         });
-        
+   
+    },
+
+    ui: {
+        "checkboxOrRadio": "input[type='checkbox'], input[type='radio']"
+    },
+
+    events: {
+        "change @ui.checkboxOrRadio": function(e){
+
+            Radio.channel("public").request("updateShowCriteriaButton");
+        }
     }
 
 });

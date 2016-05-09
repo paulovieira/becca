@@ -8,6 +8,7 @@ require("fs.light-theme.css");
 require("font-awesome.css");
 
 var $ = require("jquery");
+
 require("fs.background");
 require("fs.checkbox");
 require("fs.dropdown");
@@ -95,12 +96,18 @@ Mn.Router = BaseRouter.extend({
     }
 });
 
+// initialize popovers (must be done manualy, even if we use the data api)
+$('[data-toggle="popover"]').popover();
+
 /*
 var modalRegion = new Mn.Region({ el: $("div.mn-r-modal-contents") });
 Radio.channel("public").reply("modalRegion", function(){
     return modalRegion;
 });
 */
+
+
+
 require("./plugin");
 
 

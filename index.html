@@ -6,66 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- the bootstrap/bootflat stylesheets are being included by webpack, but we include them here too to avoid the initial repaint -->
     <link rel="stylesheet" href="/lib/bootstrap/3.3.5/css/bootstrap.css">
     <link rel="stylesheet" href="/lib/bootstrap/bootflat-cebfd8/bootflat/css/bootflat.css">
-
     <title>BECCA | BASE Evaluation Criteria for Climate Adaptation</title>
-
 </head>
 
 <body style="background-color: #f5f5f8;">
+
     <div style="background-color:#00A1A8">
-        <h1 class="text-center" style="font-size: 400%; margin-bottom: 0px; margin-top: 0px; padding-top: 30px; color: white; letter-spacing: 2px;">BECCA</h1>
-        <p class="text-center" style="font-size: 200%; margin-top: 0px; font-weight: bold; padding-bottom: 40px; word-spacing: 1px;">BASE Evaluation Criteria for Climate Adaptation</p>
+        <h1 class="text-center" style="font-size: 400%; margin-bottom: 0px; margin-top: 0px; padding-top: 30px; color: white; letter-spacing: 2px; text-shadow: 1px 1px 3px #646464;">BECCA</h1>
+        <p class="text-center" style="color: #3c424b; font-size: 200%; margin-top: 0px; font-weight: bold; padding-bottom: 40px; word-spacing: 1px; text-shadow: 1px 1px 1px #b1b1b1;">BASE Evaluation Criteria for Climate Adaptation</p>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-
-                <div style="margin-top: 30px;" class="well">
+                <div style="margin-top: 30px; padding: 15px 35px;" class="well">
+                    <h4>
+                        Welcome to BECCA!
+                    </h4>
                     <p>
-                        Welcome to BECCA! 
+                         BECCA is a careful selection of criteria to evaluate climate adaptation policies and measures. It is meant to be used as a check list of topics and issues to be considered in evaluations of concrete adaptation interventions.
                     </p>
                     <p>
-                        BECCA is careful selection of evaluation criteria for climate adaptation interventions. It is meant to be used as a check list of topics and issues to be considered in evaluations of concrete adaptation situations. 
-                    </p>
-                    <p>
-                    We do not suggest applying all criteria but a reasonable selection thereof. Climate adaptation is highly context-specific and, therefore, there is no one-size-fits-all criteria set for evaluating climate actions.
+                        We do not suggest applying all available criteria but only a reasonable selection of them. Climate adaptation is highly context-specific and, therefore, there is no "one-size-fits-all" criteria set for the evaluation of climate actions.
                     </p>
                     <div class="collapse" id="intro-read-more">
                         <p>
                             We provide guidance on which criteria to use in which adaptation situations. On this basis, the user is free to tailor their own set of evaluation criteria with specific weights of certain dimensions depending on the context.
                         </p>
+
+                        <p>
+                            BECCA is a product of Task 2.3 of the <a href="http://base-adaptation.eu/">BASE project</a>. For more details please consult BASE report 2.3, available in the following page: <a href="http://base-adaptation.eu/publications">http://base-adaptation.eu/publications</a>.
+                        </p>
                     </div>
                     <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#intro-read-more" aria-expanded="false" aria-controls="intro-read-more">
-                        READ MORE
+                        <span style="letter-spacing: 1px; font-weight: 600;">READ MORE</span>
                     </button>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <p style="font-size: 120%; font-weight: bold;">
-                Usage instructions:
-                <ol style="list-style-type: lower-alpha;">
-                    <li>Classify your adaption case in terms of the 7 structural properties listed below</li>
-                    <li>Click the "Show criteria" button below. This tool will find the most relevant criteria for your case</li>
-                </ol>
+                    Usage instructions:
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>Classify your adaption case in terms of the 7 structural properties available below. Click the <i class="fa fa-question-circle-o" style="margin-left: 3px;" aria-hidden="true"></i> icon to find more information about the meaning of the property. If some of them doesn't apply to your adaption case, leave it blank.</li>
+                        <li style="margin-top: 3px;">Click the "Show criteria" button at the bottom. This tool will find the most relevant criteria for your case</li>
+                    </ol>
                 </p>
-
                 <hr>
             </div>
         </div>
-
         <div id="dimensions-form">
-
-        <div class="row">
-            <div class="col-sm-5 col-sm-offset-1">
-
+            <div class="row">
+                <div class="col-sm-5 col-sm-offset-1">
                     <div class="dimension-title">1) Sector (choose one or more)</div>
-                    
                     <fieldset>
                         <label for="sectors_Agriculture">Agriculture</label>
                         <input type="checkbox" name="sectors:Agriculture" id="sectors_Agriculture" data-becca="context-dimension">
@@ -74,227 +72,193 @@
                         <label for="sectors_Biodiversity_Ecosystems">Biodiversity &amp; Ecosystems</label>
                         <input type="checkbox" name="sectors:Biodiversity &amp; Ecosystems" id="sectors_Biodiversity_Ecosystems" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
-                         <label for="sectors_Coastal_and_Marine_systems">Coastal and Marine systems</label>
+                        <label for="sectors_Coastal_and_Marine_systems">Coastal and Marine systems</label>
                         <input type="checkbox" name="sectors:Coastal and Marine systems" id="sectors_Coastal_and_Marine_systems" data-becca="context-dimension">
                     </fieldset>
-
-<!-- there is no case study with this dimension
+                    <!-- there is no case study with this dimension
                     <fieldset>
                          <label for="sectors_Energy">Energy</label>
                         <input type="checkbox" name="sectors:Energy" id="sectors_Energy" data-becca="context-dimension">
                     </fieldset>
 -->
-
                     <fieldset>
-                         <label for="sectors_Health_and_Social_Policies">Health and Social Policies</label>
+                        <label for="sectors_Health_and_Social_Policies">Health and Social Policies</label>
                         <input type="checkbox" name="sectors:Health and Social Policies" id="sectors_Health_and_Social_Policies" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
-                         <label for="sectors_Transport">Transport</label>
+                        <label for="sectors_Transport">Transport</label>
                         <input type="checkbox" name="sectors:Transport" id="sectors_Transport" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
-                         <label for="sectors_Production_Systems_and_Physical_Infrastructures">Production Systems and Physical Infrastructures</label>
+                        <label for="sectors_Production_Systems_and_Physical_Infrastructures">Production Systems and Physical Infrastructures</label>
                         <input type="checkbox" name="sectors:Production Systems and Physical Infrastructures" id="sectors_Production_Systems_and_Physical_Infrastructures" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
-                         <label for="sectors_Water_resources">Water resources</label>
+                        <label for="sectors_Water_resources">Water resources</label>
                         <input type="checkbox" name="sectors:Water resources" id="sectors_Water_resources" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
-                         <label for="sectors_Tourism">Tourism</label>
+                        <label for="sectors_Tourism">Tourism</label>
                         <input type="checkbox" name="sectors:Tourism" id="sectors_Tourism" data-becca="context-dimension">
                     </fieldset>
-            </div>
-            <div class="col-sm-5">
-            
+                </div>
+                <div class="col-sm-5">
                     <div class="dimension-title">2) Impact (choose one or more)</div>
-                    
                     <fieldset>
                         <label for="impacts_Extreme_temperature">Extreme Temperature</label>
                         <input type="checkbox" name="impacts:Extreme Temperature" id="impacts_Extreme_temperature" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
                         <label for="impacts_Water_scarcity">Water scarcity</label>
                         <input type="checkbox" name="impacts:Water scarcity" id="impacts_Water_scarcity" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
                         <label for="impacts_Flooding">Flooding</label>
                         <input type="checkbox" name="impacts:Flooding" id="impacts_Flooding" data-becca="context-dimension">
                     </fieldset>
-
                     <fieldset>
                         <label for="impacts_Coastal_Erosion">Coastal Erosion</label>
                         <input type="checkbox" name="impacts:Coastal Erosion" id="impacts_Coastal_Erosion" data-becca="context-dimension">
                     </fieldset>
-
-
                     <fieldset>
                         <label for="impacts_Droughts">Droughts</label>
                         <input type="checkbox" name="impacts:Droughts" id="impacts_Droughts" data-becca="context-dimension">
                     </fieldset>
-
-
                     <fieldset>
                         <label for="impacts_Soil_Erosion">Soil Erosion</label>
                         <input type="checkbox" name="impacts:Soil Erosion" id="impacts_Soil_Erosion" data-becca="context-dimension">
                     </fieldset>
-
-
                     <fieldset>
                         <label for="impacts_Vector_Borne_Diseases">Vector Borne Diseases</label>
                         <input type="checkbox" name="impacts:Vector Borne Diseases" id="impacts_Vector_Borne_Diseases" data-becca="context-dimension">
                     </fieldset>
-
-
                     <fieldset>
                         <label for="impacts_Damages_from_extreme_weather_related_events">Damages from extreme weather related events (storms, ice and snow)</label>
                         <input type="checkbox" name="impacts:Damages from extreme weather related events (storms, ice and snow)" id="impacts_Damages_from_extreme_weather_related_events" data-becca="context-dimension">
                     </fieldset>
-
+                </div>
+                <div class="col-sm-10 col-sm-offset-1">
+                    <hr>
+                </div>
             </div>
+            <div class="row dimension">
+                <div class="col-sm-5 col-sm-offset-1">
+                    <div class="dimension-title">3) Perspective 
 
-            <div class="col-sm-10 col-sm-offset-1">
-                <hr>
+                        <span style="cursor: pointer;" data-toggle="popover" data-placement="right" data-delay="80" data-content="Whether the adaptation intervention is looking at completed (retrospective) or ongoing (prospective) activities" data-trigger="hover">
+                            <i style="font-size: 105%; color: #359dc4;" class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <fieldset>
+                        <label for="perspective_retrospective">Retrospective</label>
+                        <input type="radio" name="perspective" id="perspective_retrospective" value="retrospective" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="perspective_prospective">Prospective</label>
+                        <input type="radio" name="perspective" id="perspective_prospective" value="prospective" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="perspective_both">Both</label>
+                        <input type="radio" name="perspective" id="perspective_both" value="both" data-becca="context-dimension">
+                    </fieldset>
+                </div>
+                <div class="col-sm-5">
+                    <div class="dimension-title">4) Integration
+
+                        <span style="cursor: pointer;" data-toggle="popover" data-placement="right" data-delay="80" data-content="Whether the adaptation intervention is looking at single or multiple (integrated) policies/measures" data-trigger="hover">
+                            <i style="font-size: 105%; color: #359dc4;" class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <fieldset>
+                        <label for="integration_single_measure">Single measure</label>
+                        <input type="radio" name="integration" id="integration_single_measure" value="single measure" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="integration_integrated_evaluation">Integrated evaluation</label>
+                        <input type="radio" name="integration" id="integration_integrated_evaluation" value="integrated evaluation" data-becca="context-dimension">
+                    </fieldset>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1">
+                    <hr>
+                </div>
             </div>
+            <div class="row dimension">
+                <div class="col-sm-5 col-sm-offset-1">
+                    <div class="dimension-title">5) Approach
 
-        </div>
+                        <span style="cursor: pointer;" data-toggle="popover" data-placement="right" data-delay="80" data-content="Whether the adaptation intervention is a response to guidance from a higher administrative level (top-down) or a local initiative (bottom-up)" data-trigger="hover">
+                            <i style="font-size: 105%; color: #359dc4;" class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        </span>
 
-        <div class="row dimension">
-            <div class="col-sm-5 col-sm-offset-1">
+                    </div>
+                    <fieldset>
+                        <label for="approach_bottom_up">Bottom-up</label>
+                        <input type="radio" name="approach" id="approach_bottom_up" value="Bottom-up" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="approach_top_down">Top down</label>
+                        <input type="radio" name="approach" id="approach_top_down" value="Top-Down" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="approach_both">Both</label>
+                        <input type="radio" name="approach" id="approach_both" value="Both" data-becca="context-dimension">
+                    </fieldset>
+                </div>
+                <div class="col-sm-5">
+                    <div class="dimension-title">6) Orientation
 
-                <div class="dimension-title">3) Perspective</div>
-                
-                <fieldset>
-                    <label for="perspective_retrospective">Retrospective</label>
-                    <input type="radio" name="perspective" id="perspective_retrospective" value="retrospective" data-becca="context-dimension">
-                </fieldset>
+                        <span style="cursor: pointer;" data-toggle="popover" data-placement="right" data-delay="80" data-content="Whether the focus of the action is on outcomes (analytically-driven) or on the process (process-driven) of adaptation" data-trigger="hover">
+                            <i style="font-size: 105%; color: #359dc4;" class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        </span>
 
-                <fieldset>
-                    <label for="perspective_prospective">Prospective</label>
-                    <input type="radio" name="perspective" id="perspective_prospective" value="prospective" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="perspective_both">Both</label>
-                    <input type="radio" name="perspective" id="perspective_both" value="both" data-becca="context-dimension">
-                </fieldset>
-
+                    </div>
+                    <fieldset>
+                        <label for="orientation_analytically_driven">Analytically-driven</label>
+                        <input type="radio" name="orientation" id="orientation_analytically_driven" value="Analytically" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="orientation_process_driven">Process-driven</label>
+                        <input type="radio" name="orientation" id="orientation_process_driven" value="Process" data-becca="context-dimension">
+                    </fieldset>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1">
+                    <hr>
+                </div>
             </div>
+            <div class="row dimension">
+                <div class="col-sm-5 col-sm-offset-1">
+                    <div class="dimension-title">7) Setting
 
-            <div class="col-sm-5">
-            
-                <div class="dimension-title">4) Integration</div>
-                
-                <fieldset>
-                    <label for="integration_single_measure">Single measure</label>
-                    <input type="radio" name="integration" id="integration_single_measure" value="single measure" data-becca="context-dimension">
-                </fieldset>
+                        <span style="cursor: pointer;" data-toggle="popover" data-placement="right" data-delay="80" data-content="Whether the adaption intervention has a conflictual or consensual context" data-trigger="hover">
+                            <i style="font-size: 105%; color: #359dc4;" class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        </span>
 
-                <fieldset>
-                    <label for="integration_integrated_evaluation">Integrated evaluation</label>
-                    <input type="radio" name="integration" id="integration_integrated_evaluation" value="integrated evaluation" data-becca="context-dimension">
-                </fieldset>
-
-            </div>
-
-            <div class="col-sm-10 col-sm-offset-1">
-                <hr>
-            </div>
-
-        </div>
-
-        <div class="row dimension">
-            <div class="col-sm-5 col-sm-offset-1">
-
-                
-                <div class="dimension-title">5) Approach</div>
-
-                <fieldset>
-                    <label for="approach_bottom_up">Bottom-up</label>
-                    <input type="radio" name="approach" id="approach_bottom_up" value="Bottom-up" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="approach_top_down">Top down</label>
-                    <input type="radio" name="approach" id="approach_top_down" value="Top-Down" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="approach_both">Both</label>
-                    <input type="radio" name="approach" id="approach_both" value="Both" data-becca="context-dimension">
-                </fieldset>
-
-            </div>
-
-            <div class="col-sm-5">
-            
-                
-                <div class="dimension-title">6) Orientation</div>
-
-                <fieldset>
-                    <label for="orientation_analytically_driven">Analytically-driven</label>
-                    <input type="radio" name="orientation" id="orientation_analytically_driven" value="Analytically" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="orientation_process_driven">Process-driven</label>
-                    <input type="radio" name="orientation" id="orientation_process_driven" value="Process" data-becca="context-dimension">
-                </fieldset>
-
-            </div>
-
-            <div class="col-sm-10 col-sm-offset-1">
-                <hr>
-            </div>
-
-        </div>
-
-        <div class="row dimension">
-            <div class="col-sm-5 col-sm-offset-1">
-
-                
-                <div class="dimension-title">7) Setting</div>
-
-                <fieldset>
-                    <label for="setting_conflictual">Conflictual</label>
-                    <input type="radio" name="setting" id="setting_conflictual" value="Conflictual" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="setting_consensual">Consensual</label>
-                    <input type="radio" name="setting" id="setting_consensual" value="Consensual" data-becca="context-dimension">
-                </fieldset>
-
-                <fieldset>
-                    <label for="setting_both">Both</label>
-                    <input type="radio" name="setting" id="setting_both" value="Both" data-becca="context-dimension">
-                </fieldset>
-
+                    </div>
+                    <fieldset>
+                        <label for="setting_conflictual">Conflictual</label>
+                        <input type="radio" name="setting" id="setting_conflictual" value="Conflictual" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="setting_consensual">Consensual</label>
+                        <input type="radio" name="setting" id="setting_consensual" value="Consensual" data-becca="context-dimension">
+                    </fieldset>
+                    <fieldset>
+                        <label for="setting_both">Both</label>
+                        <input type="radio" name="setting" id="setting_both" value="Both" data-becca="context-dimension">
+                    </fieldset>
+                </div>
             </div>
         </div>
-        </div>
 
-        <div class="row" id="mn-r-container">
-
+        <div class="row" data-region="main">
         </div>
 
         <div style="margin-top: 50px;">
         </div>
     </div>
-
-
     <script src="/app/_build/lib.js"></script>
     <script src="/app/_build/app.js"></script>
-
     </div>
 </body>
 

@@ -54,9 +54,7 @@ var config = {
         // in production mode: public path is used internally by webpack to reference
         // resources that have not been bundled (such as fonts and images), but that
         // have been copied to the directory where the bundle is;
-        // note that we run a grunt task after webpack that moves the resources from
-        // _build/ to _build
-        publicPath: "/_build/"
+        publicPath: "/app/_build/"
                         
     },
 
@@ -118,8 +116,8 @@ var config = {
 
             // NOTE: we have manually edit font-awesome.css and remove the query string
             // in the lines with "url('...')". Example: 
-            // url('../fonts/fontawesome-webfont.woff2?v=4.5.0')
-            "font-awesome.css": Path.resolve(libDir, "font-awesome/4.5.0/css/font-awesome.css"),
+            // url('../fonts/fontawesome-webfont.woff2?v=4.6.2')
+            "font-awesome.css": Path.resolve(libDir, "font-awesome/4.6.2/css/font-awesome.css"),
             
         }
     },

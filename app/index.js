@@ -6,10 +6,5 @@ var Mn = require("backbone.marionette");
 var criteriaPlugin = require("./plugins/criteria/criteria-plugin");
 
 criteriaPlugin.start({
-    region: new Mn.Region({ el: $("div#mn-r-container") }),
+    region: new Mn.Region({ el: $("div[data-region='main']") }),
 });
-/*
-var Becca = require("../survey/becca.json");
-console.log(Becca);
-var x = 2;
-*/
