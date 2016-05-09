@@ -12,7 +12,7 @@
         {{ 'background-color: #feb24c; border-color: #feb24c;' if item.qualitativeGrade  == 'Medium relevance' }} 
         {{ 'background-color: #e34a33; border-color: #e34a33;' if item.qualitativeGrade  == 'Low relevance' }} 
         ">
-        Score: {{ item.qualitativeGrade }}</span>
+        {{ item.qualitativeGrade }}</span>
 
         <div>
             <span style="font-weight: 700;">Criteria:</span> <span>{{ item.criteriaShort }}</span>
