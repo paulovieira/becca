@@ -32,6 +32,7 @@ var config = {
             Path.resolve(libDir, "jquery/formstone-1.0.0/js/background.js"),
             Path.resolve(libDir, "jquery/formstone-1.0.0/js/checkbox.js"),
             Path.resolve(libDir, "jquery/formstone-1.0.0/js/dropdown.js"),
+            Path.resolve(libDir, "jquery/jquery.scrollTo-2.1.2.js"),
             
         ]
     },

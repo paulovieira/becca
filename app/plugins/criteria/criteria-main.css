@@ -9,3 +9,12 @@
     margin-bottom: 10px;
     
 }
+/*
+a#xxx
+
+*/
+
+#social-links > a:link    { color: #3c424b }
+#social-links > a:visited { color: #3c424b }  
+#social-links > a:hover   { color: #3c424b }  
+#social-links > a:active  { color: #3c424b }  

@@ -1,4 +1,5 @@
 require("./criteria-main.css")
+var $ = require("jquery");
 var _ = require("underscore");
 var Backbone = require("backbone");
 var Radio = require("backbone.radio");
@@ -38,6 +39,22 @@ internals.getQualitativeScore = function(score){
     return qualitativeScore;
 }
 
+internals.readMoreCollapsed = true;
+
+internals.handleReadMore = function(){
+
+    $('button#read-more').on('click', function(e){
+        
+        internals.readMoreCollapsed = !internals.readMoreCollapsed;
+        var contents = internals.readMoreCollapsed ? 'READ MORE' : 'SHOW LESS';
+
+        setTimeout(function(){
+            $('button#read-more > span').html(contents);
+            $('button#read-more').blur()
+            $('body').click();
+        }, 300);
+    });
+}
 
 var CriteriaMain = Mn.LayoutView.extend({
 
@@ -48,6 +65,8 @@ var CriteriaMain = Mn.LayoutView.extend({
             this.ui.showCriteria.find("h4").text("Update criteria");
 
         }, this);
+
+        internals.handleReadMore();
     },
 
     template: require("./criteria-main.html"),
@@ -70,6 +89,11 @@ var CriteriaMain = Mn.LayoutView.extend({
         // the selected values from the checkboxes/radios and update the selectedDimensions object
         new DimensionsForm();
         this.compute();
+        $(window).scrollTo(this.ui.showCriteria, {
+            offset: { top: -15 },
+            duration: 300
+        });
+
     },
 
     compute: function(){
